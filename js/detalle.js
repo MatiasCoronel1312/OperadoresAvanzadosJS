@@ -10,9 +10,6 @@ const cargoArrayDeCursos = () => {
     if (localStorage.getItem("datosDelCliente") != null) {
         datos = JSON.parse(localStorage.getItem("datosDelCliente"))
 
-        console.log("llego hasta aca")
-
-
         for (dato of datos) {
             lista += `<tr>
                           <td class="align-left">$${dato.prestamoNeto}</th>

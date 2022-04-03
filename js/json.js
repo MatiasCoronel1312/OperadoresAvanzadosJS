@@ -27,7 +27,7 @@ reset.addEventListener("click", () => {
         if (result.isConfirmed) {
             localStorage.clear();
             formulario.reset();
-          Swal.fire(
+            Swal.fire(
             'Borrado!',
             'Tus datos han sido borrado.',
             'success'
@@ -38,4 +38,6 @@ reset.addEventListener("click", () => {
       })
 
 })
+
+
 

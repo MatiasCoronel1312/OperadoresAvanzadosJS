@@ -8,16 +8,13 @@ class Prestamo {
     }
 
     InteresBanco() {
-        //segun cantidad de cuotas el interes aumenta   
-        if (this.cuotas <= 3) {
-            interes = 1.5;
-        } else if ((this.cuotas > 3) && (this.cuotas <= 6)) {
-            interes = 2;
-        } else if ((this.cuotas > 6) && (this.cuotas <= 9)) {
-            interes = 2.5;
-        } else {
-            interes = 3;
-        }
+        //segun cantidad de cuotas el interes aumenta  (150% en 3cuotas o 300% en 12 cuotas) 
+        //------------agregue operador logico AND----------------------
+         this.cuotas == 3 && (interes = 1.5);
+        this.cuotas ==6  && (interes = 2);
+        this.cuotas ==9 && (interes = 2.5);
+        this.cuotas == 12 && (interes = 3);
+        
         this.totalAPagar = this.prestamoNeto * interes;
        
     }
@@ -55,10 +52,14 @@ inputCuotas.onchange = (event) => {
 
 }
 
+
 //debugger
 boton.addEventListener("click", () => {
-    console.log("Click");
-    saludo.innerHTML = '<h2>Hola ' + nombre + " " + apellido + ' , Bienvenido!</h2>';
+
+//------------Operador Ternario-------------------------
+    FaltanCargarDatos() ? FaltanDatos() : DatosCompletos();
+   
+    
 })
 
 const botonSimular = document.getElementById("botonSimular");
@@ -81,11 +82,11 @@ botonSimular.addEventListener("click", () => {
 
     prestamoNeto = prestamo1.cotizarPrestamo();
     const prestamos = [];
-    // prestamos.push(new Prestamo("matias", "coronel", "300000", 12));
-    // prestamos.push(new Prestamo("martin", "perez", "25000", 6));
-    // prestamos.push(new Prestamo("marcos", "lozada", "120000", 12));
-    // prestamos.push(new Prestamo("alicia", "rivero", "75000", 9));
-    // prestamos.push(new Prestamo("laura", "gomez", "9000", 3));
+    prestamos.push(new Prestamo("matias", "coronel", "300000", 12));
+    prestamos.push(new Prestamo("martin", "perez", "25000", 6));
+    prestamos.push(new Prestamo("marcos", "lozada", "120000", 12));
+    prestamos.push(new Prestamo("alicia", "rivero", "75000", 9));
+    prestamos.push(new Prestamo("laura", "gomez", "9000", 3));
     prestamos.push(new Prestamo(nombre, apellido, prestamoNeto, cuotas)); //el ultimo es el que se crea con los datos ingresados
 
 
@@ -112,9 +113,35 @@ botonSimular.addEventListener("click", () => {
      guardoDatosJSON();
      
 })
+
+const FaltanCargarDatos = () => {
+    return (nombre.value=="") || (apellido.value=="");
+}
     
+const FaltanDatos = () => {
+    Swal.fire({
+        position: 'center',
+        icon: 'warning',
+        title: 'Complete todos sus datos',
+        showConfirmButton: false,
+        timer: 2500
+      })
+}
+const DatosCompletos = () => {
+     saludo = document.querySelector("#saludo")
+    saludo.innerHTML = '<h2>Hola ' + nombre + " " + apellido + ' , Bienvenido!</h2>';
+}
 
 
+
+//----desestructuracion----
+
+const mostrarInfoDeUsuario = (prestamos) =>{
+    const buscar = prompt ("cliente a buscar")
+    const resultado = prestamos.find(cliente=>cliente.nombre==buscar)
+    const {nombre, apellido} = resultado
+    console.log(nombre, apellido)
+}
 // const guardoDatos = () => {
     
 
