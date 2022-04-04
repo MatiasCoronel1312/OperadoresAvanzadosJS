@@ -82,11 +82,11 @@ botonSimular.addEventListener("click", () => {
 
     prestamoNeto = prestamo1.cotizarPrestamo();
     const prestamos = [];
-    prestamos.push(new Prestamo("matias", "coronel", "300000", 12));
-    prestamos.push(new Prestamo("martin", "perez", "25000", 6));
-    prestamos.push(new Prestamo("marcos", "lozada", "120000", 12));
-    prestamos.push(new Prestamo("alicia", "rivero", "75000", 9));
-    prestamos.push(new Prestamo("laura", "gomez", "9000", 3));
+    // prestamos.push(new Prestamo("matias", "coronel", "300000", 12));
+    // prestamos.push(new Prestamo("martin", "perez", "25000", 6));
+    // prestamos.push(new Prestamo("marcos", "lozada", "120000", 12));
+    // prestamos.push(new Prestamo("alicia", "rivero", "75000", 9));
+    // prestamos.push(new Prestamo("laura", "gomez", "9000", 3));
     prestamos.push(new Prestamo(nombre, apellido, prestamoNeto, cuotas)); //el ultimo es el que se crea con los datos ingresados
 
 
@@ -111,7 +111,12 @@ botonSimular.addEventListener("click", () => {
       console.log(ImporteCuotas)
     // guardoDatos();
      guardoDatosJSON();
-     
+      //mostrarInfoDeUsuario (prestamos);
+      //---------------spread--------------
+    //   const Cliente = {
+    //     ...prestamos[0] 
+    // }
+    //   console.log (Cliente)
 })
 
 const FaltanCargarDatos = () => {
@@ -134,14 +139,19 @@ const DatosCompletos = () => {
 
 
 
-//----desestructuracion----
+//-----------------desestructuracion------------------------
 
 const mostrarInfoDeUsuario = (prestamos) =>{
     const buscar = prompt ("cliente a buscar")
-    const resultado = prestamos.find(cliente=>cliente.nombre==buscar)
+    const resultado = prestamos.find(u=>u.nombre==buscar.toUpperCase())
     const {nombre, apellido} = resultado
-    console.log(nombre, apellido)
+    console.log ('Cliente', nombre , apellido)
 }
+
+
+
+
+
 // const guardoDatos = () => {
     
 
