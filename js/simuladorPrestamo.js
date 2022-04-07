@@ -17,8 +17,7 @@ class SimuladorPrestamo {
     cotizarPrestamo = () => {
 
         const prestamoNeto = (this.sueldo * this.sueldoDebitar) * this.cuotas;
-        return (prestamoNeto);
-       
+        return (prestamoNeto);       
     
     }
 
