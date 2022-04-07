@@ -103,8 +103,9 @@ botonSimular.addEventListener("click", () => {
         TotalPrestamo.innerHTML = '<h3>Monto total del prestamo permitido: $' + prestamoNeto + '</h3>';
         const buttonDetalle = document.querySelector("#buttonDetalle");
         buttonDetalle.innerHTML=  '<button id="botonDetalle"><a href="./assets/pages/detalles.html">Detalle</a></button>';
-        ImporteCuotas= prestamos[0].totalAPagar/cuotas;
     },2500)
+        ImporteCuotas= prestamos[0].totalAPagar/cuotas;
+    
     console.log(ImporteCuotas)
     // guardoDatos();
     guardoDatosJSON();
