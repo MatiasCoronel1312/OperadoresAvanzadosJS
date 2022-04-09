@@ -1,17 +1,21 @@
- let interes=0;
+let interes=0;
 
- const sueldoDebitar = 0.25; // sueldo a debitar por el banco, solo te pueden debitar el 25% de tu sueldo
+const sueldoDebitar = 0.25; // sueldo a debitar por el banco, solo te pueden debitar el 25% de tu sueldo
 
- cuotas = "";
- 
- const inputDni = document.getElementById("dni");
+cuotas = "";
 
- const inputEmail = document.getElementById("email");
- 
- const boton = document.getElementById("botonMain");
+const inputDni = document.getElementById("dni");
 
- let datos = []
+const inputEmail = document.getElementById("email");
 
- 
+const boton = document.getElementById("botonMain");
+
+const botonEnviarDatos = document.getElementById("botonMeInteresa");
+
+
+
+let datos = [];
+
+
 
 

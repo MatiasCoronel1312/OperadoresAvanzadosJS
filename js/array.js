@@ -35,6 +35,13 @@ inputApellido.onkeyup = (event) => {
     console.clear();
     console.log(apellido);
 }
+
+
+inputEmail.onkeyup = (event) => {
+    email = event.target.value;
+    console.clear();
+    console.log(email);
+}
 let inputSueldo = document.getElementById("sueldo")
 
 inputSueldo.onkeyup = (event) => {
@@ -79,12 +86,8 @@ botonSimular.addEventListener("click", () => {
 
     prestamoNeto = prestamo1.cotizarPrestamo();
     const prestamos = [];
-    // prestamos.push(new Prestamo("matias", "coronel", "300000", 12));
-    // prestamos.push(new Prestamo("martin", "perez", "25000", 6));
-    // prestamos.push(new Prestamo("marcos", "lozada", "120000", 12));
-    // prestamos.push(new Prestamo("alicia", "rivero", "75000", 9));
-    // prestamos.push(new Prestamo("laura", "gomez", "9000", 3));
-    prestamos.push(new Prestamo(nombre, apellido, prestamoNeto, cuotas)); //el ultimo es el que se crea con los datos ingresados
+
+    prestamos.push(new Prestamo(nombre, apellido, prestamoNeto, cuotas));
 
 
     for (const prestamo of prestamos) {

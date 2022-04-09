@@ -1,0 +1,37 @@
+    [
+        {
+            "nombre": "matias",
+            "apellido": "coronel",
+            "email":"matias@hotmail.com",
+            "prestamoNeto": "300000",
+            "cuotas": 12
+        },
+        {
+            "nombre": "martin",
+            "apellido": "perez",
+            "email":"martin@hotmail.com",
+            "prestamoNeto": "25000",
+            "cuotas": 6
+        },
+        {
+            "nombre": "marcos",
+            "apellido": "lozada",
+            "email":"marcos@hotmail.com",
+            "prestamoNeto": "120000",
+            "cuotas": 12
+        },
+        {
+            "nombre": "alicia",
+            "apellido": "rivero",
+            "email":"alicia@hotmail.com",
+            "prestamoNeto": "75000",
+            "cuotas": 9
+        },
+        {
+            "nombre": "laura",
+            "apellido": "gomez",
+            "email":"laura@hotmail.com",
+            "prestamoNeto": "9000",
+            "cuotas": 3
+        }
+    ]

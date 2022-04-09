@@ -80,21 +80,6 @@ div input {
     padding: 2rem;
 }
 
-/* th {
-    padding: 2rem;
-    border-style: solid;
-    border-color: #b90101;
-    border-width: 2px ;
-} */
-/* td {
-    width: 9rem;
-    padding: 1rem;
-    border-style: solid;
-    border-color: #474343;
-    border-width: 2px ;
-} */
-
-
 .IngresoSueldo{
     padding: 0.5rem;
 }
@@ -111,6 +96,7 @@ div select {
 
 footer {
     padding: 1rem;
+    
 }
 .footer__button {
     width: 100%;
@@ -152,4 +138,15 @@ footer h3 {
  
 #botonDetalle {
     text-decoration: none;
+}
+.footer__botones {
+    display: flex;
+    justify-content: space-around;
+}
+#botonMeInteresa {
+    font-size: 1.5rem;
+}
+footer p {
+    width: 100%;
+    padding: 2rem;
 }

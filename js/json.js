@@ -2,6 +2,7 @@ const guardoDatosJSON = () => {
     datosCliente = {
         nombre: nombre.trim(),
         apellido: apellido.trim(),
+        email: email,
         prestamoNeto: parseFloat(prestamoNeto),
         cuotas: parseInt(cuotas),
         ImporteCuotas: parseFloat(ImporteCuotas)
@@ -15,7 +16,7 @@ const guardoDatosJSON = () => {
 const reset = document.getElementById("reset");
 reset.addEventListener("click", () => {
 //agregue la libreria sweet alert para la confirmacion antes de borrar los datos
-    const resp =Swal.fire({
+    const resp = Swal.fire({
         title: '¿Realmente desea eliminar los datos almacenados?',
         
         icon: 'warning',
